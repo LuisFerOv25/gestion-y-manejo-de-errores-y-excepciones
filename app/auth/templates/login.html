@@ -1,0 +1,85 @@
+{% extends '/base.html' %}
+
+  {% block title %}Login{% endblock %}
+
+  {% block content %}
+  
+<div class="bodyy">
+  <h2 class="py-5">Registra tu cuenta y accede a nuestros servicios</h2>
+  <div class="container containerr" id="container">
+    <div class="form-container sign-up-container">
+      <form action="{{ url_for('autenticar.loginUsser') }}" method="POST" autocomplete="off">
+        <h1>Iniciar sesión</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>o usa tu cuenta</span>
+        <input type="email" name="correo" id="correo" placeholder="Correo" />
+        <input type="password" name="password" id="password" placeholder="Contraseña" />
+
+
+        <a class="resetpass" href="{{ url_for('home.index') }}">Olvidaste tu contraseña?</a>
+        <!-- <button>Acceder</button> -->
+        <button type="submit" class="btn btn-primary btn-send">Iniciar Sesión</button>
+  
+
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form name="formRegisterClient" id="formRegisterClient" action="{{ url_for('autenticar.registerUser') }}" method="POST" autocomplete="off">
+
+                    <input type="text" name="nombre" autofocus  placeholder='Nombre'>
+                    <input type="text" name="apellido"   placeholder='Apellido'>
+
+                    <input type="email" name="correo"  required placeholder='Correo'>
+               
+                    <input type="text" name="direccion"  placeholder='Direccion'>
+  
+                    <input type="phone" name="telefono"  placeholder='Telefono'>
+                    <input type="password" name="password"  placeholder='Password'>
+                    <input type="password" name="repite_password"  placeholder ='Repite contraseña'>
+        
+                        <select name="genero" >
+                            <option value="" selected="selected">--- Seleccione genero---</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+            
+        
+        
+            <div class="d-grid gap-2 mt-3 mb-3">
+                <input type="submit" class="btn btn-primary btn-send" id="sendForm" value="Registrar">
+            </div>
+      
+        </form>
+
+    </div>
+
+    <div class="overlay-container">
+
+      <div class="overlay">
+
+        <div class="overlay-panel overlay-left">
+          <h1>Aun no tienes cuenta?</h1>
+          <p>Transforma tu experiencia de compra de medicamentos al crear tu cuenta en nuestra farmacia en línea, donde
+            podrás acceder de forma rapida y segura a tus productos favoritos</p>
+
+          <button class="ghost" id="signIn">Registrate</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+
+          <h1>Bienvenido de vuelta!</h1>
+          <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
+
+          <button class="ghost" id="signUp">Iniciar sesión</button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'alerts.html' %}
+{% endblock %}

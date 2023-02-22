@@ -1,0 +1,29 @@
+
+{% extends '/base_recuperar.html' %}
+
+  {% block title %}Recuperar cuenta{% endblock %}
+
+  {% block content %}
+    <h2 class=" text-center">Recuperacion de contraseña a traves de verificacion de correo electronico</h2>
+    <div class="py-3">
+
+    </div>
+    <div class="container text-center cont">
+        <div class="form-container">
+            <form action="#">
+                <h4 class="text-center ">Ingresa correo registrado en la cuenta</h4>
+                <div class="py-3">
+                <input  type="email" placeholder="Correo" />
+            
+            </div>
+                <a class="center btn" href="{{ url_for('autenticar.verificar') }}">Verificar</a>
+                <p class="forget">
+                    Ya tienes una cuenta? <a href="{{ url_for('autenticar.login') }}">Iniciar sesión</a>
+                </p>
+          
+            </form>
+        </div>
+        
+    </div>
+
+    {% endblock %}

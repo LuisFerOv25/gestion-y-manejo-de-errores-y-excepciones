@@ -1,0 +1,13 @@
+{% extends 'base_error.html' %}
+  {% block title %}Error 404{% endblock %}
+
+{% block content %}
+    <h1>Ups, Página no encontrada</h1>
+    <h1>{{e}}</h1>
+    <p class="zoom-area"> Lo siento, la página que estás buscando no se ha encontrado. </p>
+    <section class="error-container">
+    <span>4</span>
+    <span><span class="screen-reader-text">0</span></span>
+    <span>4</span>
+    </section>
+    {% endblock %}

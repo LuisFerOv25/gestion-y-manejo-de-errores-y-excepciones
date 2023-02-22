@@ -1,0 +1,30 @@
+.precios {
+  color: orangered;
+}
+
+.centrarButton {
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  height: 33rem;
+  border-radius: none;
+}
+footer {
+  width: 100%;
+  height: 200px;
+}
+
+.imgTamano {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.centrarCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

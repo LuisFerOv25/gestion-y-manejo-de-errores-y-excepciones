@@ -1,0 +1,15 @@
+{% extends 'base_error.html' %}
+  {% block title %}Error 400{% endblock %}
+
+{% block content %}
+
+    <h1>Solicitud incorrecta</h1>
+    <h1>{{e}}</h1>
+    <p class="zoom-area"> Lo siento, el servidor no puede reconocer y procesar tu solicitud, revisa la informacion</p>
+    <section class="error-container">
+    <span>4</span>
+    <span><span class="screen-reader-text">0</span></span>
+    <span>0</span>
+    </section>
+
+{% endblock %}
