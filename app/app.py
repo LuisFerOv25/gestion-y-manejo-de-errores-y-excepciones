@@ -36,45 +36,49 @@ def generate_error():
 app.register_blueprint(home)
 app.register_blueprint(autenticar)
 
-def registrer_error_handlers(app):
-    @app.errorhandler(500)
-    def internal_error(e):
-        if isinstance(e, HTTPException):
-            return render_template('500.html',e=e), 500
-        return e
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html', error=error), 404
+error_codes = [
+    400, 401, 403, 404, 405, 406, 408, 409, 410, 411, 412, 413, 414, 415,
+    416, 417, 418, 422, 428, 429, 431, 451, 500, 501, 502, 503, 504, 505
+]
+for code in error_codes:
+    @app.errorhandler(code)
+    def client_error(error):
+        return render_template('error.html', error=error), error.code
 
-    @app.errorhandler(404)
-    def page_not_found(e):
-        if isinstance(e, HTTPException):
-            return render_template('404.html',e=e), 404
-        return e
-    
-    @app.errorhandler(400)
-    def error_400_handler(e):
-        if isinstance(e, HTTPException):
-            return render_template('400.html',e=e), 400
-        return e
 
-    @app.errorhandler(401)
-    def error_401_handler(e):
-        if isinstance(e, HTTPException):
-            return render_template('401.html',e=e), 401
-        return e
     
-@app.route('/500')
-def error500():
-    abort(500)
-    
-@app.route('/401')
-def error401():
-    abort(401)
-    
+
+
 @app.route('/400')
 def error400():
     abort(400)
     
+@app.route('/401')
+def error401():
+    abort(401)
+ 
+@app.route('/403')
+def error403():
+    abort(403)  
+    
+@app.route('/428')
+def error428():
+    abort(428)  
+                
+@app.route('/500')
+def error500():
+    abort(500)
+    
+
+    
+  
+    
+
 
 
 if __name__ == '__main__':
-    registrer_error_handlers(app)
-    app.run(debug=True, port=5000)
+  
+    app.run(debug=True, port=5100)
