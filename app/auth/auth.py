@@ -150,4 +150,3 @@ def loginUsser():
     except Exception as ex:
         return render_template('400.html',mens= format(ex))
     return render_template('login.html', msjAlert = 'Debe iniciar sesión.', typeAlert=0)
-
