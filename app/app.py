@@ -1,12 +1,8 @@
 from flask import Flask,abort
 from flask import render_template
-from flask import request,session
 from auth import autenticar
 from inicio import home
-from datetime import date
-from flask_mysqldb import MySQL
-from werkzeug.utils import secure_filename
-from werkzeug.exceptions import HTTPException
+
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
 
