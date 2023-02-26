@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for("static", filename='/css/error404.css')}}">
 
-    {% block title %}{{ error.code }}{% endblock %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for(" static", filename='/css/error404.css' )}}">
+
+  {% block title %}{{ error.code }}{% endblock %}
 
 </head>
+
 <body>
 
-    <h1>Solicitud incorrecta</h1>
-    <h1>Error {{ error.code }}</h1>
-    <p class="zoom-area">{{ error.description }}</p>
-    <section class="error-container">
+  <h1>Solicitud incorrecta</h1>
+  <h1>Error {{ error.code }}</h1>
+  <p class="zoom-area">{{ error.description }}</p>
+  <section class="error-container">
     <span>{{ error.code }}</span>
-    </section>
+  </section>
 
-    <div class="link-container">
-    <a target="_blank" href="{{ url_for('autenticar.login') }}" class="more-link">Vamos a la pagina principal</a>
-    </div>
+  <div class="link-container">
+    <a target="_blank" href="{{ url_for('home.index') }}" class="more-link">Vamos a la pagina principal</a>
+  </div>
 </body>
+
 </html>

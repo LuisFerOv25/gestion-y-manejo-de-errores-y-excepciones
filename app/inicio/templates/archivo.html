@@ -1,0 +1,17 @@
+{% extends '/base.html' %}
+
+{% block title %}Subir archivo{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class='text-center'>Subir archivo</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="file">Seleccione archivo no mayor a 16 MB:</label>
+      <input type="file" name="file" class="form-control-file" id="file">
+    </div>
+    <button type="submit" class="btn btn-primary">Subir</button>
+    <a href="{{ url_for('home.homeuser') }}" class="btn btn-secondary">Atras</a>
+  </form>
+</div>
+{% endblock %}

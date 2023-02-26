@@ -40,3 +40,8 @@ def comprarproducto():
 @home.route('/homeuser/')
 def homeuser():
     return render_template("home.html")
+
+# Subir archivo
+@home.route('/subir')
+def subir():
+    return render_template("archivo.html")
