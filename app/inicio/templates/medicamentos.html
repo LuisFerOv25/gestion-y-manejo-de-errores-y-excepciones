@@ -1,0 +1,206 @@
+{% extends "base_home.html"%}
+{% block title %}Medicamentos{% endblock %}
+
+{% block content %}
+
+
+<!-- Carrusel -->
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/amitriptilina.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">AMITRIPTILINA 25 MG CAJA X 30 TABLETAS RECUBIERTAS</h5>
+          <p class="card-text">INFORMACIÓN DE USO MÉDICO, PRODUCTO DE VENTA CON FÓRMULA. CONSULTE A SU MÉDICO NO SE
+            AUTO MEDIQUE.</p>
+          <h4 class="precios" style="color: orangered;">$16.250</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/amlodipino.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">LOSARTÁN MK 50 MG CAJA CON 30 TABLETAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$17.500</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/amoxicilina.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">AMOXICILINA 500 MG CAJA CON 50 CÁPSULAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$27.150</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/aspirina.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">ASPIRINA 100 MG CAJA CON 140 TABLETAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$69.600</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-4 g-4 py-3">
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/atorvastatina.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">ATORVASTATINA 10 MG CON 30 TABLETAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$54.800</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/colecalciferol.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">VITAMIN D3 1000 CON 50 CÁPSULAS BLANDAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$49.635</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/furosemida.png" class="card-img-top" alt="..."
+          style="height: 230px; width: 170px; display: block; margin: auto;">
+        <div class="card-body">
+          <h5 class="card-title">FUROSEMIDA 40 MG CAJA CON 100 TABLETAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$20.950</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/lansoprazol.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">LANSOPRAZOL 30 MG CAJA CON 28 CÁPSULAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$25.200</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/omeprazol.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">OMEPRAZOL 20 MG CAJA CON 10 CÁPSULAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$3.800</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/paracetamol.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Paracetamol 20 MG CAJA CON 10 CÁPSULAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$23.800</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/ramipril.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ramipril 30 MG CAJA CON 20 CÁPSULAS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$32.100</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/static/img/medicamentos/salbutamol.png" class="card-img-top" alt="..."
+          style="height: 200px; width: 200px; display: block; margin: auto;">
+        <div class="card-body">
+          <h5 class="card-title">SALBUTAMOL 100 MCG CAJA CON FRASCO INHALADOR CON 200 DOSIS</h5>
+          <p class="card-text">ES UN MEDICAMENTO. NO EXCEDER SU CONSUMO. LEER INDICACIONES Y
+            CONTRAINDICACIONES. SI LOS SÍNTOMAS PERSISTEN, CONSULTAR AL MÉDICO.</p>
+          <h4 class="precios" style="color: orangered;">$13.450</h4>
+          <div class="centrarButton" align="center">
+            <a class="btn btn-primary  btn-sm" href="{{ url_for('home.comprarproducto') }}" role="button">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Paginacion -->
+  <div class="py-4">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Vista previa</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Siguiente</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <hr>
+</div>
+
+{% endblock %}

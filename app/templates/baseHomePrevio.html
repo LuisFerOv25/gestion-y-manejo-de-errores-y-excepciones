@@ -30,7 +30,7 @@
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
           <div class="dropdown">
-            <a href="{{ url_for('home.homeuser') }}"
+            <a href="{{ url_for('home.index') }}"
               class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
               <img src="/static/icons/pharmacy.png" width="50" height="50" alt="">
               <span class="fs-5">FARMACLICK</span>
@@ -52,7 +52,7 @@
                   <img src="/static/icons/user.png" alt="icon user" width="40" height="40" class="rounded-circle">
                 </a>
                 <ul class="dropdown-menu text-small">
-                  <li><a class="dropdown-item" href="{{ url_for('autenticar.logout') }}">Cerrar sesión</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('autenticar.login') }}">Iniciar sesión</a></li>
                 </ul>
               </div>
             </div>
@@ -61,21 +61,7 @@
     </header>
   </div>
 
-  <!-- Clasificación Productos -->
-  <div class="container">
-    <div class="nav-scroller py-1 mb-2">
-      <nav class="nav d-flex justify-content-between ">
-        <a class="p-2 link-secondary text-decoration-none"
-          href="{{ url_for('home.medicamentoscliente') }}">Medicamentos</a>
-        <a class=" p-2 link-secondary text-decoration-none" href="{{ url_for('home.cuidadopersonalclient') }}">Cuidado
-          Personal</a>
-        <a class=" p-2 link-secondary text-decoration-none"
-          href="{{ url_for('home.dermacosmetica') }}">Dermacosmética</a>
-        <a class=" p-2 link-secondary text-decoration-none" href="{{ url_for('home.nutricionales') }}">Nutricionales</a>
-        <a class=" p-2 link-secondary text-decoration-none" href="{{ url_for('home.bebe') }}">Bebé</a>
-      </nav>
-    </div>
-  </div>
+
 
   {% block content %}{% endblock %}
 

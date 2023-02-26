@@ -130,7 +130,7 @@ def loginUsser():
                     session['create_at']        = account['create_at']
 
                     msg = "Ha iniciado sesión correctamente."
-                    render_template('./home0.html', msjAlert = msg, typeAlert=1, dataLogin = dataLoginSesion()) 
+                    render_template('./home.html', msjAlert = msg, typeAlert=1, dataLogin = dataLoginSesion()) 
 
                 else:
                     msg = 'Datos incorrectos, por favor verfique!'

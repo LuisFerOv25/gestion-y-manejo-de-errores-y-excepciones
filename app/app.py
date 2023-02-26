@@ -69,12 +69,6 @@ def error500():
     abort(500)
     
 
-    
-  
-    
-
-
-
 if __name__ == '__main__':
   
-    app.run(debug=True, port=5200)
+    app.run(debug=True, port=5100)

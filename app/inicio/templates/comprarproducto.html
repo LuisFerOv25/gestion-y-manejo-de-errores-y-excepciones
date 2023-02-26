@@ -1,0 +1,70 @@
+{% extends "base_home.html"%}
+{% block title %}Compras{% endblock %}
+
+{% block content %}
+
+
+<!-- COMPRAS -->
+
+<div class="container centrarCard">
+  <div class="card mb-3" style="max-width: 1300px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="/static/img/home/compra.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">NOMBRE DEL PRODUCTO</h2>
+          <h1 class="precios" style="color: orangered;">$00.00</h1>
+          <h5>Referencia: 123456789</h5>
+          <p class="card-text">
+          <h5>DETALLES DEL PRODUCTO
+          </h5>
+          </p>
+          <p class="card-text"><small class="text-muted">
+              <h5>Cantidad y vía de administración.</h5>
+            </small></p>
+
+          <div class="py-1">
+            <button type="submit" class="btn btn-primary"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+              -
+            </button>
+
+            <input class="form-control-sm" type="text" style="width: 130px; height: 35px;">
+
+            <button type="submit" class="btn btn-primary"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+              +
+            </button>
+
+            <button type="submit" class="btn btn-success"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+              Comprar
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">Descripción del producto</h5>
+    <div class="card-body">
+      <h5 class="card-title">Nombre del producto.</h5>
+      <p class="card-text">Indicaciones:
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea id commodi, nam natus, debitis minima doloremque
+        adipisci atque praesentium vel accusantium, error ad laborum iste quisquam fugit qui veniam a.
+      </p>
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+
+{% endblock %}
