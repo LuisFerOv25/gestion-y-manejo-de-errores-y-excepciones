@@ -1,4 +1,4 @@
-from flask import Flask,abort,request
+from flask import Flask,abort,request,flash
 from flask import render_template
 from auth import autenticar
 from inicio import home
@@ -56,7 +56,8 @@ def upload():
         abort(413)
     filename = secure_filename(file.filename)
     file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    return 'Archivo subido con exito'
+    flash('Archivo subido con exito')
+    return render_template('./archivo.html')
 
 @app.route('/400')
 def error400():
@@ -87,4 +88,4 @@ def error500():
 
 if __name__ == '__main__':
   
-    app.run(debug=True, port=5600)
+    app.run(debug=True, port=5210)

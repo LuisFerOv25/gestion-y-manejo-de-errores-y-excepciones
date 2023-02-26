@@ -3,6 +3,17 @@
 {% block title %}Subir archivo{% endblock %}
 
 {% block content %}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
 <div class="container">
   <h1 class='text-center'>Subir archivo</h1>
   <form action="/upload" method="POST" enctype="multipart/form-data">
@@ -14,4 +25,7 @@
     <a href="{{ url_for('home.homeuser') }}" class="btn btn-secondary">Atras</a>
   </form>
 </div>
+
+
+
 {% endblock %}
